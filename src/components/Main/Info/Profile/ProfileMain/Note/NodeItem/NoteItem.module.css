@@ -1,0 +1,109 @@
+
+.notes{
+    padding: 0 20px 0 20px;
+    transition: .2s;
+}
+.note {
+    display: grid;
+    grid-template-columns: 1fr 30px 30px 30px;
+    grid-gap: 10px;
+    padding: 5px 5px 5px 0;
+    font-size: 20px;
+    color: #333333;
+    margin-top: 5px;
+    border-bottom: 1px solid #f2f2f2;
+    transition: .2s;
+}
+.note:hover{
+    background: #f2f2f2;
+}
+.circleNote{
+    color: white;
+    margin-left: 0;
+    margin-right: 5px;
+}
+.note:hover .circleNote {
+ color: #333333;
+}
+
+.btnNote {
+    border: none;
+    color: white;
+    background: white;
+    outline: none;
+    font-size: 20px;
+    transition: .2s;
+}
+.note:hover .btnNote  {
+    background: #f2f2f2;
+    color: #333333;
+}
+.linkModal{
+    cursor: pointer;
+}
+.modalWindow{
+    position: fixed;
+    display: grid;
+    grid-template-rows: 3fr 5fr 3fr;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -250px;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    outline: none;
+    background: #f7f7f7;
+    color: #333333;
+}
+.nameNoteModal{
+    text-align: center;
+    font-size: 36px;
+    width: 90%;
+    outline: none;
+    border: none;
+    background: #f7f7f7;
+
+}
+.btnNote{
+    cursor: pointer;
+}
+.textArea{
+    box-sizing: border-box;
+    height: 270px;
+    width: 606px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    resize: none;
+
+}
+.textArea:focus{
+    outline: none;
+    border-color: #ebebeb;
+}
+.close{
+    position: fixed;
+    right: 30%;
+    top: 25%;
+    font-size: 22px;
+    cursor: pointer;
+}
+.btn {
+    width: 150px;
+    height: 35px;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #333333;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    background: #e0e0e0;
+    outline: none;
+}
+.btn:hover{
+    background: #bebebe;
+    color: #f2f2f2;
+}

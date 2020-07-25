@@ -1,0 +1,50 @@
+.header {
+    height: 50px;
+    width: 100%;
+    background: #333;
+    display: grid;
+    grid-template-areas: ". home qna logo friends subjects .";
+    grid-template-columns: 325px 1fr 1fr 1fr 1fr 1fr 325px ;
+    justify-items: center;
+    align-items: center;
+    color: #ccc;
+}
+.header > * {
+    border: solid black;
+    border-width: 0 1px 0 1px;
+    border-collapse: collapse;
+}
+.imgLogo {
+    width: 50px;
+    height: 50px;
+    
+}
+.home {
+    grid-area: home;
+
+}
+.logo{
+    grid-area: logo;
+}
+.QnA{
+    grid-area: qna;
+}
+.friends{
+    grid-area: friends;
+}
+.subjects{
+    grid-area: subjects;
+}
+.home, .logo, .QnA, .friends, .subjects {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.home:hover, .logo:hover, .QnA:hover, .friends:hover, .subjects:hover{
+    background: #444;
+}
