@@ -4,7 +4,7 @@ import {Route} from "react-router-dom";
 import Profile from "./Profile/Profile";
 import QnA from "./QnA/QnA";
 import Subjects from "./Subjects/Subjects";
-import store from "../../../store/store";
+import store from "../../../Redux/store";
 import Friends from "./Friends/Friends";
 
 function Info(props) {

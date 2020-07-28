@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import style from './Post.module.css';
 import Modal from "react-modal";
+import {
+    deletePostCreate,
+    likePostPlusCreate,
+    updatePostCreate
+} from "../../../../../../../../Redux/ProfileReducer";
 
 Modal.setAppElement = function (s) {
 
@@ -8,21 +13,21 @@ Modal.setAppElement = function (s) {
 Modal.setAppElement('#root');
 
 function  Post(props) {
+
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    let id = props.id;
+
     let deletePost = () => {
-        props.dispatch({type: 'DELETE-POST', id: props.id});
+        props.dispatch(deletePostCreate(id));
     };
-    let refTextareaModal = React.createRef();
-    let temp = props.dispatch({type:'DETECT-POST',id: props.id})
-    let updatePost = () => {
-        let text = refTextareaModal.current.value;
-        props.dispatch({type: 'UPDATE-POST', template: temp, text: text});
+
+    let updatePost = (e) => {
+        let text = e.target.value;
+        props.dispatch(updatePostCreate(id,text));
     };
 
     let likePlus = () => {
-
-            props.dispatch({type: 'LIKE-POST-PLUS',  template: temp});
-    
+            props.dispatch(likePostPlusCreate(id));
     };
 
     return (
@@ -33,7 +38,7 @@ function  Post(props) {
                    onRequestClose={() => setModalIsOpen(false)} style={props.style} >
                 <a onClick={() => setModalIsOpen(false)} className={style.close}>&#10006;</a>
                 <div className={style.bodyModal}>
-                    <textarea onChange={updatePost} ref={refTextareaModal} className={style.textArea} value={props.value}/>
+                    <textarea onChange={updatePost} className={style.textArea} value={props.value}/>
                 </div>
                 <div className={style.footerModalNote}>
                     <button onClick={() => setModalIsOpen(false)} className={style.btnModal}>Close</button>

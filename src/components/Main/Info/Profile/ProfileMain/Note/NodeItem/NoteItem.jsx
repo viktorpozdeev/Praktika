@@ -1,35 +1,32 @@
 import React, {useState} from 'react';
 import style from './NoteItem.module.css';
 import Modal from "react-modal";
+import {addNotesCreate, deleteNotesCreate, updateNotesCreate, updateNotesNameCreate}
+    from "../../../../../../../Redux/NotesReducer";
 
 Modal.setAppElement('#root');
 
 
 function NoteItem(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-
+    let id = props.id;
     /* логика для текстэрия в модальном окне*/
-    let bodyNotes = React.createRef();
-    let nameNotes = React.createRef();
-    let updateNotes = () => {
-        let textNode = bodyNotes.current.value;
-        let temp = props.dispatch({type: 'DETECT-NOTES', id: props.id});
-        props.dispatch({type: 'UPDATE-NOTES', template: temp, text: textNode});
+
+    let updateNotes = (e) => {
+        let textNode = e.target.value;
+        props.dispatch(updateNotesCreate(id,textNode));
     }
-    let updateName = () => {
-        let name = nameNotes.current.value;
-        let temp = props.dispatch({type: 'DETECT-NOTES', id: props.id});
-        props.dispatch({type: 'UPDATE-NOTES-NAME',template: temp, text: name});
+    let updateName = (e) => {
+        let name = e.target.value;
+        props.dispatch(updateNotesNameCreate(id,name));
     }
     /* логика для добавления заметки*/
     let addNotes = () => {
-        let idNewNote = props.dispatch({type: 'DETECTED-NEW-ID-NOTE'});
-        props.dispatch({type: 'ADD-NOTES',id: idNewNote});
-        debugger;
+        props.dispatch(addNotesCreate());
         props.value !== "" || props.value === "" ? setModalIsOpen(true) : setModalIsOpen(false);
     };
     let deleteNotes = () => {
-        props.dispatch({type: 'DELETE-NOTES', id: props.id});
+        props.dispatch(deleteNotesCreate(id));
     };
 
     return (
@@ -41,14 +38,14 @@ function NoteItem(props) {
                    shouldCloseOnOverlayClick={() => setModalIsOpen(false)}
                    onRequestClose={() => setModalIsOpen(false)} style={props.notePage.StyleModal}>
                 <a onClick={() => setModalIsOpen(false)} className={style.close}>&#10006;</a>
-                <input onChange={updateName} className={style.nameNoteModal} ref={nameNotes} value={props.name}/>
+                <input onChange={updateName} className={style.nameNoteModal}  value={props.name}/>
                 <div className={style.bodyModalNote}>
-                    <textarea onChange={updateNotes} ref={bodyNotes} className={style.textArea} value={props.value}
+                    <textarea onChange={updateNotes} className={style.textArea} value={props.value}
                               name="notes"/>
                 </div>
                 <div className={style.footerModalNote}>
                     <button onClick={() => setModalIsOpen(false)} className={style.btn}>Close</button>
-                    <button onClick={updateNotes} className={`${style.btn} ${style.btnSave}`}>Save</button>
+
                 </div>
             </Modal>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Main.module.css';
 import Info from "./Info/Info";
-import store from "../../store/store";
+import store from "../../Redux/store";
 
 
 function  Main(props) {
