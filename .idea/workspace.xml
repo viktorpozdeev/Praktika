@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be74affc-259f-46b4-be82-a10cac38d724" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/NotesReducer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/ProfileReducer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/store.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/reduxStore.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/NodeItem/NoteItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/NodeItem/NoteItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/Posts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/Posts/Post/Post.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/NotesReducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/NotesReducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/ProfileReducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ProfileReducer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/ProfileFeed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/ProfileFeed.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileMain.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -58,6 +58,8 @@
       <workItem from="1595942075719" duration="4379000" />
       <workItem from="1595960749376" duration="1668000" />
       <workItem from="1595963016876" duration="84000" />
+      <workItem from="1596011212708" duration="576000" />
+      <workItem from="1596011802571" duration="1037000" />
     </task>
     <servers />
   </component>

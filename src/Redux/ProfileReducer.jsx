@@ -18,9 +18,28 @@ export const updatePostCreate = (id, text) => ({type: UPDATE_POST, id: id, text:
 export const likePostPlusCreate = (id) => ({type: LIKE_POST_PLUS, id: id});
 export const likePostMinusCreate = (id) => ({type: LIKE_POST_MINUS, id: id});
 
-//Reducer
+// bind state
+let initializeState = {
+    Posts: [
+        {id: 1,  values: "всее чиил",urlImg:'https://images4.alphacoders.com/921/thumb-1920-921846.jpg',  likeCount: 23}
+    ],
+    textUpdate: '',
+    textImglink:'',
+    StyleModal: {
+        overlay: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(68,68,68,0.65)'
+        }
+    }
+};
 
-const ProfileReducer = (state, action) => {
+
+//Reducer
+const ProfileReducer = (state = initializeState, action) => {
     // template variable i
 
     let i;

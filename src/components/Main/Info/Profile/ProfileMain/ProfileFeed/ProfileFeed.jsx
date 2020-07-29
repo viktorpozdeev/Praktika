@@ -16,6 +16,7 @@ function  ProfileFeed(props) {
     let addPost = () => {
         props.dispatch(addPostCreate());
     };
+    debugger;
     return (
         <div className={style.profileFeed1}>
             <div className={style.profileFeed} >

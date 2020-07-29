@@ -12,7 +12,29 @@ export const deleteNotesCreate = (id) => ({type: DELETE_NOTES, id: id});
 export const updateNotesCreate = (id, text) => ({type: UPDATE_NOTES, id: id, text: text});
 export const updateNotesNameCreate = (id, text) => ({type: UPDATE_NOTES_NAME, id: id, text: text});
 
-const NotesReducer = (state, action) => {
+//bind state NotesPage
+let initializeState = {
+    Notes: [
+        {id: 4, name: "Продукуты", values: "Купить покушать"},
+        {id: 3, name: "Быстрикова экзамен", values: "Сдать Экзамен"},
+        {id: 2, name: "Список задач", values: "Поотжиматься и почилить"},
+        {id: 1, name: "Планы", values: "Выучить React.js"}
+    ],
+    NameNotesTemp: '',
+    StyleModal: {
+        overlay: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(68,68,68,0.65)'
+        }
+    }
+};
+
+//Reducer
+const NotesReducer = (state = initializeState, action) => {
 
     // " i " it's template variable
 

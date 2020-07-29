@@ -5,11 +5,14 @@ import {Route} from "react-router-dom";
 import Note from "./Note/Note";
 
 
-function  ProfileMain(props) {
+function ProfileMain(props) {
+    debugger
     return (
         <div className={style.profileMain}>
-            <Route path='/profile/profilefeed' render={() => (<ProfileFeed profilePage={props.state.ProfilePage} dispatch={props.dispatch}/>)}/>
-            <Route path='/profile/note/' render={() => (<Note notePage={props.state.NotesPage} dispatch={props.dispatch} />)}/>
+            <Route path='/profile/profilefeed'
+                   render={() => (<ProfileFeed profilePage={props.state.profilePage} dispatch={props.dispatch}/>)}/>
+            <Route path='/profile/note/'
+                   render={() => (<Note notePage={props.state.notePage} dispatch={props.dispatch}/>)}/>
         </div>
     );
 }
