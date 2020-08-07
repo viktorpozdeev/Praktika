@@ -81,7 +81,8 @@
     resize: none;
 
 }
-.textArea:focus{
+.textArea:focus {
+    box-shadow: 5px 5px 10px -5px rgba(184,184,184,0.8);
     outline: none;
     border-color: #ebebeb;
 }

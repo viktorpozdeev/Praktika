@@ -7,9 +7,7 @@ import {
     updatePostCreate
 } from "../../../../../../../../Redux/ProfileReducer";
 
-Modal.setAppElement = function (s) {
-
-}
+Modal.setAppElement = function (s) {}
 Modal.setAppElement('#root');
 
 function  Post(props) {
@@ -27,7 +25,7 @@ function  Post(props) {
     };
 
     let likePlus = () => {
-            props.dispatch(likePostPlusCreate(id));
+        props.dispatch(likePostPlusCreate(id));
     };
 
     return (
@@ -38,6 +36,7 @@ function  Post(props) {
                    onRequestClose={() => setModalIsOpen(false)} style={props.style} >
                 <a onClick={() => setModalIsOpen(false)} className={style.close}>&#10006;</a>
                 <div className={style.bodyModal}>
+                    <span className={style.span}>Изменение поста &#9998;</span>
                     <textarea onChange={updatePost} className={style.textArea} value={props.value}/>
                 </div>
                 <div className={style.footerModalNote}>

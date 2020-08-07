@@ -22,6 +22,13 @@
     background: #f7f7f7;
     color: #333333;
 }
+.span {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: #cccccc;
+}
 .btnModal {
     width: 150px;
     height: 35px;
@@ -49,14 +56,15 @@
     height: 270px;
     width: 606px;
     padding: 10px 20px;
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 16px;
     border: 1px solid #f2f2f2;
     border-radius: 10px;
     resize: none;
-
+    transition: .3s;
 }
 .textArea:focus{
+    box-shadow: 5px 5px 10px -5px rgba(184,184,184,0.8);
     outline: none;
     border-color: #ebebeb;
 }

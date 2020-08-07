@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be74affc-259f-46b4-be82-a10cac38d724" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/reduxStore.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/NotesReducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/NotesReducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/ProfileReducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ProfileReducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/ProfileFeed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/ProfileFeed.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileMain.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Friends/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Friends/Friends.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/NodeItem/NoteItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/NodeItem/NoteItem.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/Note.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/Note.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/Note.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/Note/Note.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/Posts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/Posts/Post/Post.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/Posts/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/Posts/Post/Post.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/ProfileFeed.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Info/Profile/ProfileMain/ProfileFeed/ProfileFeed.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,6 @@
   <component name="ProjectId" id="1fAf3heMxhcdJv1dDaompJXeOP0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -59,7 +57,12 @@
       <workItem from="1595960749376" duration="1668000" />
       <workItem from="1595963016876" duration="84000" />
       <workItem from="1596011212708" duration="576000" />
-      <workItem from="1596011802571" duration="1037000" />
+      <workItem from="1596011802571" duration="1835000" />
+      <workItem from="1596292713628" duration="1910000" />
+      <workItem from="1596382850311" duration="1632000" />
+      <workItem from="1596634161090" duration="3262000" />
+      <workItem from="1596714277256" duration="620000" />
+      <workItem from="1596800648665" duration="1264000" />
     </task>
     <servers />
   </component>
@@ -79,10 +82,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1595930011419" />
-    <state x="758" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595961516728">
+    <state x="758" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1596635289800">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="758" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1595961516728" />
+    <state x="758" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1596635289800" />
     <state x="656" y="257" width="607" height="536" key="find.popup" timestamp="1595962595693">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
