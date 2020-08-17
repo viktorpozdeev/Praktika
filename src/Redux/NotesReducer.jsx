@@ -1,7 +1,7 @@
 // define constants action type
 
 const ADD_NOTES = 'ADD-NOTES';
-const DELETE_NOTES =  'DELETE-NOTES';
+const DELETE_NOTES = 'DELETE-NOTES';
 const UPDATE_NOTES = 'UPDATE-NOTES';
 const UPDATE_NOTES_NAME = 'UPDATE-NOTES-NAME';
 
@@ -38,36 +38,48 @@ const NotesReducer = (state = initializeState, action) => {
 
     // " i " it's template variable
 
-    let i;
+    let i, stateCopy;
 
     switch (action.type) {
         case ADD_NOTES:
             let temp = state.Notes[0].id + 1;
-            let item = {id: temp, name: "Новая заметка", values: ""};
-            state.Notes.unshift(item);
-            return state;
+            return {
+                ...state,
+                Notes: [{id: temp, name: "Новая заметка", values: ""}, ...state.Notes],
+            };
         case DELETE_NOTES:
             state.Notes.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Notes.splice(i, 1);
-            return state;
+            stateCopy = {
+                ...state,
+                Notes: [...state.Notes]
+            };
+            stateCopy.Notes.splice(i, 1);
+            return stateCopy;
         case UPDATE_NOTES:
             state.Notes.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Notes[i].values = action.text;
-            return state;
+            stateCopy = {
+                ...state,
+                Notes: [...state.Notes]
+            };
+            stateCopy.Notes[i].values = action.text;
+            return stateCopy;
         case UPDATE_NOTES_NAME:
             state.Notes.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Notes[i].name = action.text;
+            stateCopy = {
+                ...state,
+                Notes: [...state.Notes]
+            };
+            stateCopy.Notes[i].name = action.text;
+            return stateCopy;
+        default:
             return state;
-        default: return state;
     }
-
-
 };
 
 export default NotesReducer;

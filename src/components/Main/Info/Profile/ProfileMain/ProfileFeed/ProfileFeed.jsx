@@ -1,24 +1,34 @@
 import React from 'react';
 import style from './ProfileFeed.module.css';
-import Posts from "./Posts/Posts";
-import {addPostCreate, updateTextareaImgCreate, updateTextareaPostCreate} from "../../../../../../Redux/ProfileReducer";
+import Post from "./Post/Post";
+
 
 
 function  ProfileFeed(props) {
+
+    let posts = props.profilePage.Posts.map(p => <Post deletePost={props.deletePost}
+                                                             updateTextPost={props.updatePost}
+                                                             likePlusPost={props.likePlus}
+                                                             style={props.profilePage.StyleModal}
+                                                             id={p.id} value={p.values}
+                                                             likeCount={p.likeCount}
+                                                             url={p.urlImg}/>)
+
     let changeTextarea = (e) => {
         let textPost = e.target.value;
-        props.dispatch(updateTextareaPostCreate(textPost));
+        props.changePostText(textPost);
     };
     let changeTextareaImg = (e) => {
         let textLinkImg = e.target.value;
-        props.dispatch(updateTextareaImgCreate(textLinkImg));
+        props.changePostLinkImg(textLinkImg);
     };
     let addPost = () => {
-        props.dispatch(addPostCreate());
+        props.addPost();
     };
-    debugger;
     return (
         <div className={style.profileFeed1}>
+            {/*textarea area*/}
+
             <div className={style.profileFeed} >
                 <div className={style.wrapInput}>
                     <textarea onChange={changeTextarea} className={style.inputPost}  value={props.profilePage.textUpdate} placeholder='Напишите учебный пост для одногруппников...'type="text"/>
@@ -28,7 +38,11 @@ function  ProfileFeed(props) {
                     <button onClick={addPost} className={style.btn}>Опубликовать</button>
                 </div>
             </div>
-            <Posts profilePage={props.profilePage} dispatch={props.dispatch}/>
+            {/*Post area*/}
+            <div className={style.posts}>
+                {posts}
+            </div>
+
 
         </div>
     );

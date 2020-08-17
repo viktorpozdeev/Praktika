@@ -11,7 +11,7 @@ function Info(props) {
     return (
 
         <div className={style.info}>
-            <Route path='/profile' render={() => <Profile state={props.state} dispatch={props.dispatch}/>}/>
+            <Route path='/profile' render={() => <Profile store={props.store}/>}/>
             <Route path='/qna' render={() => <QnA/>}/>
             <Route path='/subjects' render={() => <Subjects/>}/>
             <Route path='/friends' render={() => <Friends/>}/>

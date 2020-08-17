@@ -10,7 +10,7 @@ function App(props) {
         <div className="App">
             <BrowserRouter>
                 <Header/>
-                <Main state={props.state} dispatch={props.dispatch}/>
+                <Main store={props.store}/>
             </BrowserRouter>
         </div>
     );

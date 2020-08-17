@@ -10,7 +10,7 @@ function  Profile(props) {
         <div className={style.profile}>
             <UserInfo/>
             <Settings/>
-            <ProfileMain state={props.state} dispatch={props.dispatch} />
+            <ProfileMain store={props.store} />
             <NavBar/>
         </div>
     );

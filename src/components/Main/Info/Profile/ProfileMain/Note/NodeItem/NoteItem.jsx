@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import style from './NoteItem.module.css';
 import Modal from "react-modal";
-import {addNotesCreate, deleteNotesCreate, updateNotesCreate, updateNotesNameCreate}
-    from "../../../../../../../Redux/NotesReducer";
+
 
 Modal.setAppElement('#root');
 
@@ -10,25 +9,25 @@ Modal.setAppElement('#root');
 function NoteItem(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     let id = props.id;
-    /* логика для текстэрия в модальном окне*/
 
+    /* логика для текстэрия в модальном окне*/
     let updateNotes = (e) => {
         let textNode = e.target.value;
-        props.dispatch(updateNotesCreate(id,textNode));
+        props.updateTextNotes(id, textNode);
     }
     let updateName = (e) => {
         let name = e.target.value;
-        props.dispatch(updateNotesNameCreate(id,name));
+        props.updateNameText(id,name);
     }
     /* логика для добавления заметки*/
     let addNotes = () => {
-        props.dispatch(addNotesCreate());
+        props.addNote();
         props.value !== "" || props.value === "" ? setModalIsOpen(true) : setModalIsOpen(false);
     };
     let deleteNotes = () => {
-        props.dispatch(deleteNotesCreate(id));
+        props.deleteNoteItem(id);
     };
-
+    debugger
     return (
         <div className={style.notes}>
 

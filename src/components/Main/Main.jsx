@@ -7,7 +7,7 @@ import store from "../../Redux/store";
 function  Main(props) {
     return (
         <div className={style.main}>
-            <Info state={props.state} dispatch={props.dispatch} />
+            <Info store={props.store} />
         </div>
     );
 }

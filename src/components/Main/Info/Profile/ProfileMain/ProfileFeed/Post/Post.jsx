@@ -5,7 +5,7 @@ import {
     deletePostCreate,
     likePostPlusCreate,
     updatePostCreate
-} from "../../../../../../../../Redux/ProfileReducer";
+} from "../../../../../../../Redux/ProfileReducer";
 
 Modal.setAppElement = function (s) {}
 Modal.setAppElement('#root');
@@ -16,16 +16,16 @@ function  Post(props) {
     let id = props.id;
 
     let deletePost = () => {
-        props.dispatch(deletePostCreate(id));
+        props.deletePost(id);
     };
 
     let updatePost = (e) => {
         let text = e.target.value;
-        props.dispatch(updatePostCreate(id,text));
+        props.updateTextPost(id,text);
     };
 
     let likePlus = () => {
-        props.dispatch(likePostPlusCreate(id));
+        props.likePlusPost(id);
     };
 
     return (

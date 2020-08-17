@@ -1,12 +1,17 @@
-import React, {useState} from 'react';
-import NoteItem from "./NodeItem/NoteItem";
+import React from 'react';
 import style from "./Note.module.css"
-import {addNotesCreate} from "../../../../../../Redux/NotesReducer";
+import NoteItem from "./NodeItem/NoteItem";
 
 function  Note(props) {
-    let Notes = props.notePage.Notes.map(n => <NoteItem  notePage={props.notePage} dispatch={props.dispatch} value={n.values} id={n.id} name={n.name}/>)
+
+    let Notes = props.notePage.Notes.map(n => <NoteItem updateTextNotes={props.updateNotes}
+                                                        updateNameText={props.updateName}
+                                                        addNote={props.addNote}
+                                                        deleteNoteItem={props.deleteNotes}
+                                                        notePage={props.notePage}
+                                                        value={n.values} id={n.id} name={n.name}/>);
     let addNote = () => {
-        props.dispatch(addNotesCreate());
+        props.addNote();
     };
     return (
         <div>

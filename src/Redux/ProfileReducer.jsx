@@ -42,63 +42,64 @@ let initializeState = {
 const ProfileReducer = (state = initializeState, action) => {
     // template variable i
 
-    let i;
+    let i, stateCopy;
 
     switch (action.type) {
         case UPDATE_TEXTAREA_POST:
-            state.textUpdate = action.text;
-            return state;
+            return {
+                ...state,
+                textUpdate: action.text
+            };
         case UPDATE_TEXTAREA_POST_IMG:
-            state.textImglink = action.text;
-            return state;
+            return {
+              ...state,
+              textImglink: action.text
+            };
         case ADD_POST:
             if (state.Posts.length === 0) {
-                let item = {
-                    id: 0,
-                    values: state.textUpdate,
-                    urlImg: state.textImglink,
-                    likeCount: 0
+                return {
+                    ...state,
+                    Posts: [{id: 0, values: state.textUpdate, urlImg: state.textImglink, likeCount: 0}, ...state.Posts],
+                    textImglink: '',
+                    textUpdate: ''
                 };
-                state.Posts.unshift(item);
-                state.textUpdate = '';
-                state.textImglink = '';
             } else {
                 let temp = state.Posts[0].id + 1;
-                let item = {
-                    id: temp,
-                    values: state.textUpdate,
-                    urlImg: state.textImglink,
-                    likeCount: 0
+                return {
+                    ...state,
+                    Posts: [{id: temp, values: state.textUpdate, urlImg: state.textImglink, likeCount: 0}, ...state.Posts],
+                    textImglink: '',
+                    textUpdate: ''
                 };
-                state.Posts.unshift(item);
-                state.textUpdate = '';
-                state.textImglink = '';
             }
-            return state;
         case DELETE_POST:
             state.Posts.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Posts.splice(i, 1);
-            return state;
+            stateCopy = {...state, Posts: [...state.Posts]};
+            stateCopy.Posts.splice(i, 1);
+            return stateCopy;
         case UPDATE_POST:
             state.Posts.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Posts[i].values = action.text;
-            return state;
+            stateCopy = {...state, Posts: [...state.Posts]};
+            stateCopy.Posts[i].values = action.text;
+            return stateCopy;
         case LIKE_POST_PLUS:
             state.Posts.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Posts[i].likeCount++;
-            return state;
+            stateCopy = {...state, Posts: [...state.Posts]};
+            stateCopy.Posts[i].likeCount++;
+            return stateCopy;
         case LIKE_POST_MINUS:
             state.Posts.forEach((el, num, arr) =>
                 el.id === action.id ? i = num : i
             );
-            state.Posts[i].likeCount--;
-            return state;
+            stateCopy = {...state, Posts: [...state.Posts]};
+            stateCopy.Posts[i].likeCount--;
+            return stateCopy;
         default: return state;
     }
 
